@@ -1,0 +1,37 @@
+body {
+  background-color: #34495e;
+}
+
+.Films-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  justify-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 80vw;
+}
+
+.Films-grid-item {
+  background-color: #3598db;
+  color: #fff;
+  border-radius: 1rem;
+  width: 15rem;
+  height: 10rem;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.Films-grid-item-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.Films-grid-item-release-date {
+  font-size: 1rem;
+  font-weight: 300;
+  position: absolute;
+  bottom: 5%;
+  left: 30%;
+}

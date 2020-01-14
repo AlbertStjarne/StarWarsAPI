@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './Films.css';
 
 const API_URL = 'https://swapi.co/api/films/';
 
