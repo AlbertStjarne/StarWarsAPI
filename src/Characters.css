@@ -47,3 +47,16 @@ body {
   cursor: pointer;
   border: none;
 }
+
+@media (max-width: 1140px) {
+  .Characters {
+    width: 85vw;
+    height: auto;
+  }
+
+  .Characters-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+  }
+}
