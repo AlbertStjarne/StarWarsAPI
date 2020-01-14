@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './Films.css';
+import Characters from './Characters';
 
 const API_URL = 'https://swapi.co/api/films/';
 
@@ -72,6 +73,7 @@ class Films extends Component {
     return (
       <>
         <div className='Films-grid-container'>{filmTitle}</div>
+        <Characters names={this.state.names} title={this.state.title} />
       </>
     );
   }
