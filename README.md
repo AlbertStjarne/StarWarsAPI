@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# A React application with data from the Star Wars API
 
-## Available Scripts
+This application has been built with React using data from the Star Wars API, SWAPI. When the site is loaded Star Wars films are fetched from the API. When clicking a film the characters of film are fetched and presented.
 
-In the project directory, you can run:
+Only class-based components have been used.
 
-### `yarn start`
+The application was created for desktop with media queries for small screens.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The application is deployed @ [https://albertstjarne-starwarsapi.netlify.com/](https://albertstjarne-starwarsapi.netlify.com/)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## WIP - Next steps
 
-### `yarn test`
+As the project is work in progress, please find below next steps to dig into:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Add spinner when data is fetched (Spinner component is added but not logic yet)
+- Stop rerendering with help of PureComponent and by removing inline arrow function
+- Get Close button to close the Characters component
+- Transforming Characters component into a Modal
 
-### `yarn build`
+## API used
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The Star Wars API can be found @ [https://swapi.co/](https://swapi.co/)
+<br>
+<br>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Using create-react-app
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The project was initialized with create-react-app, [Create React App](https://github.com/facebook/create-react-app)
 
-### `yarn eject`
+# Instructions to run the application
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Run these commands in the project directory:<br>
+Installing dependencies<br>
+`$ npm install`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Starting the application in development mode<br>
+`$ npm start`
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This should open the application in the browser, otherwise go to:<br>
+[http://localhost:3000](http://localhost:3000)<br>
+The page will reload if you make code edits.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Screenshots
 
-## Learn More
+Filmlist desktop
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img src="filmlist_desktop.png" width=650>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Filmlist and Characters desktop
 
-### Code Splitting
+<img src="filmlist_and_characters_desktop.png" width=650>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Filmlist mobile
 
-### Analyzing the Bundle Size
+<img src="filmlist_mobile.png" width=300>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Filmlist and Characters mobile
 
-### Making a Progressive Web App
+<img src="filmlist_and_characters_mobile.png" width=300>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Author
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Albert Stjärne (https://github.com/AlbertStjarne)
