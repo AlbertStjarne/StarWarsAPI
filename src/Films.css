@@ -35,3 +35,25 @@ body {
   bottom: 5%;
   left: 30%;
 }
+
+@media (max-width: 1140px) {
+  body {
+    background-color: #3598db;
+  }
+  .Films-grid-container {
+    grid-template-columns: 1fr;
+  }
+  .Films-grid-item {
+    background-color: #34495e;
+    width: 85vw;
+    border-radius: 0;
+  }
+  .Films-grid-item-title {
+    font-size: 2rem;
+  }
+  .Films-grid-item-release-date {
+    text-align: right;
+    padding-right: 1rem;
+    right: 0;
+  }
+}
