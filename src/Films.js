@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './Films.css';
 import Characters from './Characters';
+// import Spinner from './Spinner';
 
 const API_URL = 'https://swapi.co/api/films/';
 
@@ -13,6 +14,7 @@ class Films extends Component {
       peopleLinks: [],
       names: [],
       title: [],
+      loading: false,
     };
     this.getFilms = this.getFilms.bind(this);
     this.getPeople = this.getPeople.bind(this);
@@ -21,6 +23,9 @@ class Films extends Component {
 
   componentDidMount() {
     if (this.state.films.length === 0) {
+      // this.setState({
+      //   loading: true,
+      // });
       this.getFilms();
     }
   }
@@ -29,6 +34,7 @@ class Films extends Component {
     let films = await axios.get(API_URL);
     this.setState({
       films: films.data.results,
+      // loading: false,
     });
   }
 
@@ -42,6 +48,9 @@ class Films extends Component {
   }
 
   async getNames() {
+    // this.setState({
+    //   loading: true,
+    // });
     let names = [];
     for (let i = 0; i < this.state.peopleLinks.length; i++) {
       let res = await axios.get(this.state.peopleLinks[i]);
@@ -49,6 +58,7 @@ class Films extends Component {
     }
     this.setState({
       names: names,
+      // loading: false,
     });
   }
 
@@ -70,12 +80,16 @@ class Films extends Component {
         </button>
       ));
 
+    // if (this.state.loading) {
+    //   return <Spinner />;
+    // } else {
     return (
       <>
         <div className='Films-grid-container'>{filmTitle}</div>
         <Characters names={this.state.names} title={this.state.title} />
       </>
     );
+    // }
   }
 }
 
