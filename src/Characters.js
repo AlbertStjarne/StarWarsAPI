@@ -47,7 +47,6 @@ class Characters extends Component {
     let filmCharacters = await axios.get(`${API_URL}${filmId}/`);
     this.setState({
       peopleLinks: filmCharacters.data.characters,
-      title: filmCharacters.data.title,
     });
     this.getNames(this.state.peopleLinks);
   }
@@ -108,13 +107,17 @@ class Characters extends Component {
                 close
               </button>
 
-              {this.state.names.map((name, i) => {
-                return (
-                  <div className='Characters-grid-item' key={i}>
-                    {name}
-                  </div>
-                );
-              })}
+              {this.state.loading ? (
+                <Spinner />
+              ) : (
+                this.state.names.map((name, i) => {
+                  return (
+                    <div className='Characters-grid-item' key={i}>
+                      {name}
+                    </div>
+                  );
+                })
+              )}
             </div>
           </Modal>
         </div>
